@@ -35,7 +35,6 @@ namespace kryptoarythm
                     }
                     else
                     {
-                        //Console.WriteLine(tablica);
                         continue;
                     }
                 }
@@ -62,25 +61,24 @@ namespace kryptoarythm
                             {
                                 if(ABCDE_F.ToString()[2] == H[0])
                                 {
-                                    int wynik = ABCDE_A+ABCDE_F*10+ABCDE_G*100;
+                                    int wynik = ABCDE_A+ABCDE_F*100+ABCDE_G*10;
                                     if(wynik.ToString().Length == 8) 
                                     {
                                         if (wynik.ToString()[1] == F.ToString()[0] && wynik.ToString()[5] == D.ToString()[0]) 
                                         {
+                                            Console.WriteLine($"A: {A}, B: {B}, C: {C}, D: {D}, E: {E}, F: {F}, G: {G} ");
                                             Console.WriteLine("wynik: " + wynik);
-                                            prawda=false;
+                                            prawda = false;
                                         }
                                         else
                                         {
-                                            Console.WriteLine(wynik);
-                                            Console.WriteLine(wynik.ToString()[1] + " " + F.ToString()[0] + " " + wynik.ToString()[5] + " " + D.ToString()[0]);  
-                                            Console.WriteLine("7");
+                                            //Console.WriteLine("7");
                                             continue;
                                         }
                                     }
                                     else 
                                     {
-                                        Console.WriteLine("6");
+                                        //Console.WriteLine("6");
                                         continue;
                                     }
                                 }
